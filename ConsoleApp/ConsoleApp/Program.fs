@@ -580,7 +580,7 @@ let test_and_set_test5 =
     Call ("print_array", [Access (AccVar "a"); Num 11])
   ]);;
 
-// > run (Prog [test_and_set_test]) [] |> ignore;;
+run (Prog [test_and_set_test]) [] |> ignore;;
 // 1 5 val it : unit = ()
 // > run (Prog [test_and_set_test2]) [] |> ignore;;
 // 4 1 val it : unit = ()
