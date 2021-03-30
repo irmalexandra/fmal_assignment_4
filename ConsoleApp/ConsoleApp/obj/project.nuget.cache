@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "QdVqQGcF0NaR3kWhsrUToN6EWCCKCBFQKcIRWdrLBauhlqhj/x7zyJ9VGyvkgTioBy8aVUeGSmdaLDK0UBRXVQ==",
+  "success": true,
+  "projectFilePath": "F:\\alexandra\\git_repositories\\FMAL-Assignment-4\\ConsoleApp\\ConsoleApp\\ConsoleApp.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\alexandra\\.nuget\\packages\\fsharp.core\\5.0.0\\fsharp.core.5.0.0.nupkg.sha512",
+    "C:\\Users\\alexandra\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.11\\microsoft.netcore.app.host.win-x64.3.1.11.nupkg.sha512"
+  ],
+  "logs": []
+}
