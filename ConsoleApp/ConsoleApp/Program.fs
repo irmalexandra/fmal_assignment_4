@@ -329,7 +329,7 @@ let run (Prog topdecs) vs =
    And then dereference it with the * operator and check if the value returned from this address equals to 1234 and break if that is true. Otherwise inside the loop we
    increment i by 1 so that in the next iteration of the while loop we are looking "1" further in the memory to find 1234. And finally once we find 1234 the loop breaks
    and we have the address that 1234 was stored in. Or in other words we have the address of a from the main function. Then we assign 0 to that address and return from f.
-   After we return we print a. And as we noted before 0 was assigned to a through the f function. That is why 0 is printed at the end of main.
+   After we return we print a. And as we noted before 0 was assigned to a through the f function. That is why 0 is printed at the end of the main function.
    
 *)
 
