@@ -318,8 +318,19 @@ let run (Prog topdecs) vs =
 // Problem 5
 
 (* ANSWER 5 HERE
-    (i) This prints 10 because ...
-   (ii) This prints 0 because ...
+
+    (i) The case when 10 is printed, p and q have been allocated memory linearly through the alloc methods being called.
+    So p would get memory allocation first and then q. So if we take q and go one "slot" backwards (*(q-1)) we would end up in the
+    address that has been allocated for p. And then 10 is assigned to that address by dereferencing it. So when we dereference p in the print statement
+    we are looking into the place in the memory that 10 was just signed to or (q-1). This is why 10 is printed when we call print (*p).
+    
+   (ii) First we declare variables a,b,c and d. Then 1234 is assigned to a. This means that 1234 is stored at the memory address of a. Then inside the f function
+   we again declare a variable i. And access its memory address through the reference operator &. The while condition is taking the address of i with &i and we add i to it.
+   And then dereference it with the * operator and check if the value returned from this address equals to 1234 and break if that is true. Otherwise inside the loop we
+   increment i by 1 so that in the next iteration of the while loop we are looking "1" further in the memory to find 1234. And finally once we find 1234 the loop breaks
+   and we have the address that 1234 was stored in. Or in other words we have the address of a from the main function. Then we assign 0 to that address and return from f.
+   After we return we print a. And as we noted before 0 was assigned to a through the f function. That is why 0 is printed at the end of main.
+   
 *)
 
 // void main() {
@@ -580,7 +591,7 @@ let test_and_set_test5 =
     Call ("print_array", [Access (AccVar "a"); Num 11])
   ]);;
 
-// > run (Prog [test_and_set_test]) [] |> ignore;;
+run (Prog [test_and_set_test]) [] |> ignore;;
 // 1 5 val it : unit = ()
 // > run (Prog [test_and_set_test2]) [] |> ignore;;
 // 4 1 val it : unit = ()
